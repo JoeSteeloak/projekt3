@@ -1,11 +1,70 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/main.scss">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Jonas Ståleker - SASS</title>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/clock.js" type="module"></script>
 </head>
+
 <body>
-    
+    <div id="page-container">
+        <div id="content-wrap">
+            <header>
+                <picture>
+                    <source srcset="./images/logo.png?as=avif&width=75" type="image/avif">
+                    <source srcset="./images/logo.png?as=webp&width=75" type="image/webp">
+                    <source srcset="./images/logo.png?width=75" type="image/png">
+                    <img src="./images/logo.png?width=75" alt="logo">
+                </picture>
+                <h1>Moment 3 - CSS-preprocessorer</h1>
+                <!-- Menyknapp för att öppna mobilmenyn-->
+                <button class="menu-btn open" id="open-menu">
+                    <span class="menu-icon">
+                        <span class="bars"></span>
+                        <span class="bars"></span>
+                        <span class="bars"></span>
+                    </span>
+                    <span class="menu-text">Meny</span>
+                </button>
+                <!-- navigering -->
+                <nav id="nav-menu">
+                    <!-- Knapp som visas om mobilmenyn är utfälld-->
+                    <button class="menu-btn close" id="close-menu">
+                        <span class="menu-icon">
+                            <span class="bars cross1"></span>
+                            <span class="bars cross2"></span>
+                        </span>
+                        <span class="menu-text">Stäng meny</span>
+                    </button>
+                    <ul>
+                        <li><a href="index.html" class="current">Hem</a></li>
+                        <li><a href="images.html">Bilder</a></li>
+                        <li><a href="process.html">Processen</a></li>
+                        <li><a href="sass.html">SASS</a></li>
+                        <li><a href="#">Övrigt</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <h1>Välkommen!</h1>
+                <p>Detta moment handlar om att automatisera arbetsprocessen för webbutveckling med verktygen NodeJS och
+                    Parcel.
+                    Du kommer också lära dig mer om automatisk publicering mot molntjänster.</p>
+                <p>Denna sida är en uppgift för kurs DT211G - Frontend-baserad webbutveckling på Mittuniversitetet</p>
+                <div id="clock">
+                    <p></p>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <p>Copyright &copy; 2024 Jonas Ståleker</p>
+        </footer>
+    </div>
 </body>
+
 </html>
