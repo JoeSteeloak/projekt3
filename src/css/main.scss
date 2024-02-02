@@ -1,1 +1,13 @@
-@use "base/_reset.scss"
+@use "abstracts/variables";
+@use "abstracts/placeholders";
+@use "abstracts/mixins";
+@use "abstracts/functions";
+@use "base/reset";
+@use "base/typography";
+@use "components/buttons";
+@use "components/clock";
+@use "layout/footer";
+@use "layout/header";
+@use "layout/navigation";
+@use "pages/images";
+@use "themes/theme";

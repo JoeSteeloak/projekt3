@@ -1,0 +1,21 @@
+@use "../abstracts/variables";
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 150px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 150px;
+    width: 100%;
+    background-color: variables.$tertiary-color;
+    text-align: center;
+    line-height: 100px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}

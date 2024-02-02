@@ -1,0 +1,29 @@
+@use "../abstracts/variables";
+
+* {
+    font-family: variables.$main-font;
+}
+
+/* mobile */
+@media screen and (max-width: 800px) {
+
+    main h1,
+    main p {
+        margin: 5%;
+    }
+}
+
+
+/* desktop */
+@media screen and (min-width: 1201px) {
+
+    /* designa main-text*/
+    main p,
+    main h1,
+    main h2 {
+        text-align: center;
+        padding: 10px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}

@@ -1,6 +1,7 @@
+@use "../abstracts/variables";
+
 header {
-    background-color: black;
-    color: white;
+    background-color: variables.$tertiary-color;
     height: 120px;
     margin: 0;
     padding: 0 1em;
