@@ -1,13 +1,21 @@
-    /* desktop */
-    @media screen and (min-width: 1201px) {
+@use "../abstracts/mixins";
 
-        /* designa bildgalleriet */
-        img {
-            display: block;
-            margin: 10px auto;
-        }
+@keyframes imagehighlight {
+    0% {
+        border-radius: 100%;
     }
 
-    img {
-        max-width: 100%;
+    100% {
+        border-radius: 0%;
     }
+}
+
+main img {
+    @include mixins.center();
+    animation-name: imagehighlight;
+    animation-duration: 3s;
+}
+
+img:hover {
+    transform: scale(1.1, 1.1);
+}

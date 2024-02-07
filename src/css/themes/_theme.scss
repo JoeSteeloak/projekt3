@@ -1,6 +1,7 @@
 @use "../abstracts/variables";
 
 
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: black !important;
@@ -8,19 +9,19 @@
 
         header {
             background-color: darken(variables.$quaternary-color, 10%);
-            ;
         }
 
         nav {
-
-            background-color: darken(variables.$quaternary-color, 10%);
-            ;
-
+            @extend header;
         }
 
         footer {
-            background-color: darken(variables.$quaternary-color, 10%);
+            @extend header;
         }
     }
-
+    @if (prefers-color-scheme: dark) {
+        main img {
+            border: 2px solid white;
+        }
+    }
 }
