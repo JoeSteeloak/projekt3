@@ -19,7 +19,7 @@
     }
 
     .menu-btn:hover {
-        background-color: grey;
+        background-color: darken(variables.$quaternary-color, 20%);
         box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
     }
 
@@ -133,7 +133,7 @@
     }
 
     .menu-btn:hover {
-        background-color: grey;
+        background-color: darken(variables.$quaternary-color, 20%);
         box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
     }
 
@@ -152,7 +152,7 @@
 
     /* Design av meny för mobilenheter, placeras till höger om skärmen */
     nav {
-        background-color: black;
+        background-color: variables.$tertiary-color;;
         box-shadow: 0 0px 10px rgba(0, 0, 0, 0.71);
         font-size: 1.4em;
         position: absolute;

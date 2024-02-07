@@ -8,8 +8,18 @@
 @media screen and (max-width: 800px) {
 
     main h1,
+    main h2,
     main p {
         margin: 5%;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+
+    main h1,
+    main h2,
+    main p {
+        margin: 1% 5%;
     }
 }
 

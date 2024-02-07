@@ -1,1 +1,26 @@
 @use "../abstracts/variables";
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black !important;
+        color: white !important;
+
+        header {
+            background-color: darken(variables.$quaternary-color, 10%);
+            ;
+        }
+
+        nav {
+
+            background-color: darken(variables.$quaternary-color, 10%);
+            ;
+
+        }
+
+        footer {
+            background-color: darken(variables.$quaternary-color, 10%);
+        }
+    }
+
+}
