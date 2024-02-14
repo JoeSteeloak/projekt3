@@ -1,5 +1,9 @@
 @use "../abstracts/variables";
 
+.menu-btn:hover {
+    transform: scale(1.1, 1.1);
+}
+
 /* mobile */
 @media screen and (max-width: 800px) {
 
