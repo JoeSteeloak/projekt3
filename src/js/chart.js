@@ -2,16 +2,39 @@
 
 window.onload = loadAntagning();
 
+
+
+/* Hämta datan till diagramet */
+
+async function loadAntagning() {
+    try {
+        /* hämta datan async */
+        const response = await fetch(`https://studenter.miun.se/~mallar/dt211g/`);
+        const data = await response.json();
+        /*  sortera ut endast kurserna */
+        const courseData = data.filter(e => e.type == 'Kurs');
+        /* sortera efter antal sökandet*/
+        courseData.sort(function(a, b){
+            return b.applicantsTotal - a.applicantsTotal;
+        });
+        /* klipp ner till bara de 6 mest populära kurserna  */
+        const finalCourseData = courseData.slice(0,6);
+        console.log(finalCourseData);
+        /* plocka ut namnen på kurserna */
+        const courseLabels = finalCourseData.map(obj => obj.name);
+        /* plocka ut värdena */
+        const courseValues = finalCourseData.map(obj => obj.applicantsTotal);
+
 /* chart.js för att skapa diagram */
 const ctx = document.getElementById('myChart');
 
 new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: courseLabels,
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            label: 'Antal sökande',
+            data: courseValues,
             borderWidth: 1
         }]
     },
@@ -24,17 +47,15 @@ new Chart(ctx, {
     }
 });
 
-/* Hämta datan till diagramet */
-
-async function loadAntagning() {
-    try {
-        /* hämta datan async */
-        const response = await fetch(`https://studenter.miun.se/~mallar/dt211g/`);
-        const data = await response.json();
-        /*  sortera ut endast kurserna */
-        const courseData = data.filter(element => element.type == 'Kurs');
         /* sortera ut endast programmen */
         const programData = data.filter(element => element.type == 'Program');
+        /* sortera efter antal sökandet*/
+        programData.sort(function(a, b){
+            return b.applicantsTotal - a.applicantsTotal;
+        });
+        /* klipp ner till bara de 5 mest populära programen  */
+        const finalProgramData = programData.slice(0,5);
+        console.log(finalProgramData);
 
     } catch (error) {
         console.log(error);
