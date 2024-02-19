@@ -9,6 +9,8 @@
     <title>NodeJS</title>
     <script src="js/main.js" type="module"></script>
     <script src="js/clock.js" type="module"></script>
+    <script type="module" src="js/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -21,7 +23,7 @@
                     <source srcset="./images/logo.png?width=75" type="image/png">
                     <img src="./images/logo.png?width=75" alt="logo">
                 </picture>
-                
+
                 <!-- Menyknapp för att öppna mobilmenyn-->
                 <button class="menu-btn open" id="open-menu">
                     <span class="menu-icon">
@@ -51,35 +53,9 @@
                 </nav>
             </header>
             <main>
-                <article>
-                    <h1>Processen - NodeJS</h1>
-                    <h2>NodeJS och NPM</h2>
-                    <p>Jag installerade den senaste versionen av Node.js från deras <a
-                            href="https://nodejs.org">hemsida</a>. Sen startade jag ett nytt projekt från kommandotolken
-                        med
-                        kommandot <em>npm init</em> och accepterade standardinställningarna. Efter det installerade jag
-                        Parcel med kommandot <em>npm install parcel --save-dev</em> vilket såg till att det var ett
-                        utvecklingsberoende, så det bara är med under utvecklingen och inte publiceringen. Jag skapade
-                        också en .gitignore-fil i mitt projekt med <em>node_modules,
-                            dist,</em> och <em>.parcel-cache</em> eftersom NPM skapar de på nytt ändå när jag publicerar
-                        hemsidan. </p>
-                    <h2>Parcel och Sharp</h2>
-                    <p>Parcel hjälper att minifiera och transpilera filerna i mitt projekt och när jag la till bilder på
-                        min hemsida installerades Sharp som automatiskt optimerar bilderna med filtyp, storlek och
-                        kvalitet. Med hjälp av koden <em>"browserslist": "> 0.5%, last 2 versions, not dead"</em> gör
-                        jag också mitt projekt bakåtkompatibelt för att den ska fungera i så många webbläsare som
-                        möjligt. Jag tog bort <em>defer</em> på mina js-länkar i html-koden och la till
-                        <em>type="module</em> för att de skulle bli transpilerade.</p>
-                    <h2>Versionshantering</h2>
-                    <p>I mitt projekt skapar jag en mapp som jag döper till <em>src</em> där själva hemsidan byggs och
-                        som skiljer sig från <em>dist</em> som skapas automatiskt när filerna minifierats för
-                        publicering. Jag gjorde mitt projekt till ett repository på GitHub och skapade en dev-gren som
-                        jag jobbade aktivt på projektet från, med regelbundna commits, och som jag sammanfogade (merge)
-                        med main-grenen när jag ansåg den redo.</p>
-                    <h2>Publicering</h2>
-                    <p>Jag laddar upp projektet till Netlify genom GitHub och Netlify sköter publiceringen.</p>
-                </article>
-                <div id="clock"></div>
+                <div>
+                    <canvas id="myChart"></canvas>
+                </div>
             </main>
         </div>
         <footer>
