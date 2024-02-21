@@ -1,9 +1,8 @@
 "use strict";
 
-
-
 /* variabler */
 const searchBtnEl = document.getElementById('searchBtn');
+const searchInputEl = document.getElementById('searchInput');
 
 /* eventlistener */
 searchBtnEl.addEventListener('click', searchLocation, false);

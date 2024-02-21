@@ -39,6 +39,7 @@ async function loadAntagning() {
                 }]
             },
             options: {
+                indexAxis: "y",
                 scales: {
                     y: {
                         beginAtZero: true
