@@ -21,8 +21,8 @@ let marker = L.marker([62.39264256963892, 17.284794169579705]).addTo(map);
 /* map control, hitta din plats */
 L.control.locate().addTo(map);
 
-/*  inbyggd map search EJ AJAX 
-L.Control.geocoder().addTo(map); */
+/*  inbyggd map search EJ AJAX */
+L.Control.geocoder().addTo(map); 
 
 /* sökfunktion */
 
