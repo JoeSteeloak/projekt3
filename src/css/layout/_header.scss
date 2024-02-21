@@ -10,4 +10,25 @@ header {
     align-items: center;
     max-width: 100%;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+
+    img {
+        @keyframes logospin {
+            25% {
+                transform: rotate(90deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            75% {
+                transform: rotate(270deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        animation: logospin 3s;
+    }
 }
