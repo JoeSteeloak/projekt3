@@ -1,7 +1,6 @@
 @use "abstracts/variables";
 @use "abstracts/placeholders";
 @use "abstracts/mixins";
-@use "abstracts/functions";
 
 @use "base/reset";
 @use "base/typography";
@@ -15,5 +14,6 @@
 
 @use "pages/images";
 @use "pages/charts";
+@use "pages/maps";
 
 @use "themes/theme";

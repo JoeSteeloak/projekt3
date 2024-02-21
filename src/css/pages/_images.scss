@@ -10,7 +10,7 @@
     }
 }
 
-main img {
+main .image-gallery img {
     @include mixins.center();
     animation-name: imagehighlight;
     animation-duration: 3s;
