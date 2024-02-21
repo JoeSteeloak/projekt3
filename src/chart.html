@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.scss">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>Jonas Ståleker - SASS</title>
+    <title>NodeJS</title>
     <script src="js/main.js" type="module"></script>
-    <script src="js/clock.js" type="module"></script>
+    <script type="module" src="js/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -42,26 +43,23 @@
                         <span class="menu-text">Stäng meny</span>
                     </button>
                     <ul>
-                        <li><a href="index.html" class="current">Hem</a></li>
+                        <li><a href="index.html">Hem</a></li>
                         <li><a href="images.html">Bilder</a></li>
-                        <li><a href="chart.html">Diagram</a></li>
+                        <li><a href="chart.html" class="current">Diagram</a></li>
                         <li><a href="sass.html">SASS</a></li>
-                        <li><a href="map">Karta</a></li>
+                        <li><a href="map.html">Karta</a></li>
                     </ul>
                 </nav>
             </header>
             <main>
-                <h1>CSS-Preprocessorer</h1>
-                <p>Detta sida handlar om att visa att jag:</p>
-                <ul>
-                    <li>Förstår syftet med CSS-preprocessorer.</li>
-                    <li>Kan använda SASS för att underlätta utveckling med CSS.</li>
-                    <li>Kan praktiskt använda utvecklings-miljön som skapades i tidigare moment.</li>
-                    <li>Kan automatisera konvertering av SASS-filer med Parcel.</li>
-                </ul>
-                <p>Denna sida är en uppgift för kurs DT211G - Frontend-baserad webbutveckling på Mittuniversitetet</p>
-                <div id="clock">
-                    <p></p>
+                <h1>Mest populära kurserna</h1>
+                <div>
+                    
+                    <canvas class="chart" id="myChart1"></canvas>
+                </div>
+                <h1>Mest populära programmen</h1>
+                <div>
+                    <canvas id="myChart2" class="chart"></canvas>
                 </div>
             </main>
         </div>

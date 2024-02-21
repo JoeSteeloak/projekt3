@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.scss">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>Jonas Ståleker - SASS</title>
+    <title>Map</title>
     <script src="js/main.js" type="module"></script>
-    <script src="js/clock.js" type="module"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script type="module" src="js/map.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css">
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 </head>
 
 <body>
@@ -21,7 +29,6 @@
                     <source srcset="./images/logo.png?width=75" type="image/png">
                     <img src="./images/logo.png?width=75" alt="logo">
                 </picture>
-
                 <!-- Menyknapp för att öppna mobilmenyn-->
                 <button class="menu-btn open" id="open-menu">
                     <span class="menu-icon">
@@ -42,27 +49,17 @@
                         <span class="menu-text">Stäng meny</span>
                     </button>
                     <ul>
-                        <li><a href="index.html" class="current">Hem</a></li>
+                        <li><a href="index.html">Hem</a></li>
                         <li><a href="images.html">Bilder</a></li>
                         <li><a href="chart.html">Diagram</a></li>
                         <li><a href="sass.html">SASS</a></li>
-                        <li><a href="map">Karta</a></li>
+                        <li><a href="map.html" class="current">Karta</a></li>
                     </ul>
                 </nav>
             </header>
             <main>
-                <h1>CSS-Preprocessorer</h1>
-                <p>Detta sida handlar om att visa att jag:</p>
-                <ul>
-                    <li>Förstår syftet med CSS-preprocessorer.</li>
-                    <li>Kan använda SASS för att underlätta utveckling med CSS.</li>
-                    <li>Kan praktiskt använda utvecklings-miljön som skapades i tidigare moment.</li>
-                    <li>Kan automatisera konvertering av SASS-filer med Parcel.</li>
-                </ul>
-                <p>Denna sida är en uppgift för kurs DT211G - Frontend-baserad webbutveckling på Mittuniversitetet</p>
-                <div id="clock">
-                    <p></p>
-                </div>
+                <div id="searchBarDiv"><label for="searchInput"></label><input type="search" name="search" id="searchInput" placeholder="sök på plats"><button id="searchBtn">Sök</button></div>
+                <div id="map"></div>
             </main>
         </div>
         <footer>
